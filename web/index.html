@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Translating with the Gemini API</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <main>
+    <h1>Translating with the Gemini API</h1>
+    <form>
+      <div class="form-container">
+        <label for="language">Input Language:</label>
+          <select id="input_language" name="language">
+              <option value="ko">Korean</option>
+              <option value="en">English</option>
+              <option value="jp">Japanese</option>
+              <option value="cn">Chinese</option>
+              <option value="fr">French</option>
+              <option value="de">German</option>
+          </select>
+        <label for="language">Output Language:</label>
+          <select id="output_language" name="language">
+            <option value="ko">Korean</option>
+            <option value="en">English</option>
+            <option value="jp">Japanese</option>
+            <option value="cn">Chinese</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+        </select>
+      </div>
+      <div class="prompt-box">
+        <label>
+          <textarea id="prompt" name="prompt" placeholder="Enter inputs here" type="text" value=""></textarea>
+        </label>
+        <button type="submit">Go</button>
+      </div>
+    </form>
+    <p class="output">
+      <div id="output" class="output-box">
+        
+      </div>
+    </p>
+  </main>
+
+  <script src="https://unpkg.com/markdown-it@8.4.2/dist/markdown-it.min.js"></script>
+  <script src="https://unpkg.com/base64-js@1.3.0/base64js.min.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
