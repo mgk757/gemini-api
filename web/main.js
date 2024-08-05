@@ -55,3 +55,23 @@ form.onsubmit = async (ev) => {
     output.innerHTML += '<hr>' + e;
   }
 };
+
+document.getElementById('copy').addEventListener('click', function() {
+  var copyText = document.getElementById('output').innerText;
+  var tmptext = document.createElement('textarea');
+  tmptext.value = copyText;
+  document.body.appendChild(tmptext);
+  tmptext.select();
+  document.execCommand('copy');
+  document.body.removeChild(tmptext);
+  // alert('Copied');
+  
+  const alertBox = document.getElementById('copy-message');
+  const alertBoxShow = () => {
+    alertBox.classList.add('show');
+    setTimeout(() => {
+      alertBox.classList.remove('show');
+    }, 1000);
+  };
+  alertBoxShow();
+});

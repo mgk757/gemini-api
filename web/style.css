@@ -72,6 +72,28 @@ form {
   /* overflow-x: auto; 가로 스크롤바 */
 }
 
+.copy-button {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-message {
+  background: rgba(0,0,0,.3);
+  border-radius: 0px 0px 10px 10px ;
+  padding: 0px 30px;
+  margin-left: 150px;
+  position: absolute;
+  top: -52px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.copy-message.show {
+  transform: translateY(100%);
+}
+
 label {
   display: flex;
   flex: 1;
